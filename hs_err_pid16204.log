@@ -1,0 +1,219 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 201326592 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3550), pid=16204, tid=31448
+#
+# JRE version:  (17.0.6+9) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (17.0.6+9-LTS-190, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dorg.jetbrains.run.directory=C:\Users\renar\Documents\Development\crud-Ecommerce-App-test\src\test\resources\features -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.3\lib\idea_rt.jar=50167:C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.3\bin -Dfile.encoding=UTF-8 io.cucumber.core.cli.Main --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name ^$ --glue br.ada.ecommerce.test.customer C:/Users/renar/Documents/Development/crud-Ecommerce-App-test/src/test/resources/features/customer_register.feature
+
+Host: Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz, 8 cores, 11G,  Windows 11 , 64 bit Build 23606 (10.0.23606.1000)
+Time: Thu Dec 14 14:04:23 2023 SA Eastern Standard Time elapsed time: 0.038166 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000016f027c7c40):  JavaThread "Unknown thread" [_thread_in_vm, id=31448, stack(0x0000002090100000,0x0000002090200000)]
+
+Stack: [0x0000002090100000,0x0000002090200000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6734ea]
+V  [jvm.dll+0x7d18f4]
+V  [jvm.dll+0x7d309e]
+V  [jvm.dll+0x7d3703]
+V  [jvm.dll+0x2433c5]
+V  [jvm.dll+0x6703f9]
+V  [jvm.dll+0x664d32]
+V  [jvm.dll+0x300086]
+V  [jvm.dll+0x307606]
+V  [jvm.dll+0x356c1e]
+V  [jvm.dll+0x356e4f]
+V  [jvm.dll+0x2d72e8]
+V  [jvm.dll+0x2d8254]
+V  [jvm.dll+0x7a33b1]
+V  [jvm.dll+0x3647f1]
+V  [jvm.dll+0x782839]
+V  [jvm.dll+0x3e757f]
+V  [jvm.dll+0x3e9001]
+C  [jli.dll+0x5297]
+C  [ucrtbase.dll+0x29363]
+C  [KERNEL32.DLL+0x1257d]
+C  [ntdll.dll+0x5aa58]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff8760be958, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000016f0281ff90 GCTaskThread "GC Thread#0" [stack: 0x0000002090200000,0x0000002090300000] [id=13512]
+  0x0000016f0282cce0 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000002090300000,0x0000002090400000] [id=31104]
+  0x0000016f0282e6a0 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000002090400000,0x0000002090500000] [id=4108]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff8758f7f07]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000016f027c3370] Heap_lock - owner thread: 0x0000016f027c7c40
+
+Heap address: 0x0000000741e00000, size: 3042 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000741e00000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff875cdc759]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (1 events):
+Event: 0.027 Loaded shared library C:\Program Files\Java\jdk-17\bin\java.dll
+
+
+Dynamic libraries:
+0x00007ff6590a0000 - 0x00007ff6590b0000 	C:\Program Files\Java\jdk-17\bin\java.exe
+0x00007ff8f96d0000 - 0x00007ff8f98e7000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff8f8360000 - 0x00007ff8f8424000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff8f6ed0000 - 0x00007ff8f7276000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff8f7280000 - 0x00007ff8f7391000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff8e9da0000 - 0x00007ff8e9db8000 	C:\Program Files\Java\jdk-17\bin\jli.dll
+0x00007ff8e1580000 - 0x00007ff8e159b000 	C:\Program Files\Java\jdk-17\bin\VCRUNTIME140.dll
+0x00007ff8f8c40000 - 0x00007ff8f8cf1000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff8f85a0000 - 0x00007ff8f8647000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff8f8d00000 - 0x00007ff8f8da6000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff8f8900000 - 0x00007ff8f8a17000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff8f7a10000 - 0x00007ff8f7bbd000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff8f6b50000 - 0x00007ff8f6b76000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff8c7f40000 - 0x00007ff8c81d3000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.23606.1000_none_f2311c6d8f48a7ce\COMCTL32.dll
+0x00007ff8f88d0000 - 0x00007ff8f88f9000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff8f6db0000 - 0x00007ff8f6ec9000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff8f6a40000 - 0x00007ff8f6ada000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff8eb110000 - 0x00007ff8eb11a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff8f7880000 - 0x00007ff8f78b1000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff8f3f70000 - 0x00007ff8f3f7c000 	C:\Program Files\Java\jdk-17\bin\vcruntime140_1.dll
+0x00007ff8d9310000 - 0x00007ff8d939e000 	C:\Program Files\Java\jdk-17\bin\msvcp140.dll
+0x00007ff875610000 - 0x00007ff8761e7000 	C:\Program Files\Java\jdk-17\bin\server\jvm.dll
+0x00007ff8f8350000 - 0x00007ff8f8358000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff8e9bf0000 - 0x00007ff8e9c24000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff8c4e10000 - 0x00007ff8c4e19000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff8f9610000 - 0x00007ff8f9681000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff8f59a0000 - 0x00007ff8f59b8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff8ea600000 - 0x00007ff8ea60a000 	C:\Program Files\Java\jdk-17\bin\jimage.dll
+0x00007ff8ebd90000 - 0x00007ff8ebfc3000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff8f7480000 - 0x00007ff8f7809000 	C:\WINDOWS\System32\combase.dll
+0x00007ff8f8430000 - 0x00007ff8f8507000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ff8ebd50000 - 0x00007ff8ebd82000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff8f73a0000 - 0x00007ff8f741a000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff8ea7f0000 - 0x00007ff8ea7fe000 	C:\Program Files\Java\jdk-17\bin\instrument.dll
+0x00007ff8e5170000 - 0x00007ff8e5195000 	C:\Program Files\Java\jdk-17\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.23606.1000_none_f2311c6d8f48a7ce;C:\Program Files\Java\jdk-17\bin\server
+
+VM Arguments:
+jvm_args: -Dorg.jetbrains.run.directory=C:\Users\renar\Documents\Development\crud-Ecommerce-App-test\src\test\resources\features -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.3\lib\idea_rt.jar=50167:C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.3\bin -Dfile.encoding=UTF-8 
+java_command: io.cucumber.core.cli.Main --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name ^$ --glue br.ada.ecommerce.test.customer C:/Users/renar/Documents/Development/crud-Ecommerce-App-test/src/test/resources/features/customer_register.feature
+java_class_path (initial): C:\Users\renar\Documents\Development\crud-Ecommerce-App-test\target\test-classes;C:\Users\renar\Documents\Development\crud-Ecommerce-App-test\target\classes;C:\Users\renar\.m2\repository\io\cucumber\cucumber-core\7.11.2\cucumber-core-7.11.2.jar;C:\Users\renar\.m2\repository\io\cucumber\cucumber-gherkin\7.11.2\cucumber-gherkin-7.11.2.jar;C:\Users\renar\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.11.2\cucumber-gherkin-messages-7.11.2.jar;C:\Users\renar\.m2\repository\io\cucumber\messages\21.0.1\messages-21.0.1.jar;C:\Users\renar\.m2\repository\io\cucumber\tag-expressions\5.0.1\tag-expressions-5.0.1.jar;C:\Users\renar\.m2\repository\io\cucumber\cucumber-expressions\16.1.2\cucumber-expressions-16.1.2.jar;C:\Users\renar\.m2\repository\io\cucumber\datatable\7.11.2\datatable-7.11.2.jar;C:\Users\renar\.m2\repository\io\cucumber\cucumber-plugin\7.11.2\cucumber-plugin-7.11.2.jar;C:\Users\renar\.m2\repository\io\cucumber\docstring\7.11.2\docstring-7.11.2.jar;C:\Users\renar\.m2\repository\io\cucumber\html-formatter\20.2.1\html-formatter-20.2.1.jar;C:\Users\renar\.m2\repository\io\cucumber\junit-xml-formatter\0.1.0\junit-xml-formatter-0.1.0.jar;C:\Users\renar\.m2\repository\io\cucumber\ci-environment\9.1.0\ci-environment-9.1.0.jar;C:\Users\renar\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\renar\.m2\repository\io\cucumber\cucumber-java\7.11.2\cucumber-java-7.11.2.jar;C:\Users\renar\.m2\repository\io\cucumber\gherkin\26.2.0\gherkin-26.2.0.jar;C:\Users\renar\.m2\repository\io\cucumber\cucumber-jvm-deps\1.0.6\cucumber-jvm-deps-1.0.6.jar;C:\Users\renar\.m2\repository\io\cucumber\cucumber-junit\7.11.2\cucumber-junit-7.11.2.jar;C:\Users\renar\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\renar\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;C:\Users\renar\.m2\repository\io\rest-assured\rest-assured\5.3.0\rest-assured-5.3.0.jar;C:\Users\renar\.m2\repository\org\apache\gr
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 201326592                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 3189768192                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 3189768192                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-17
+PATH=C:\Program Files\Java\jdk-17\bin;C:\maven\apache-maven-3.9.5\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\dotnet\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\Users\renar\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.3\bin;
+USERNAME=renar
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 23606 (10.0.23606.1000)
+OS uptime: 0 days 19:17 hours
+Hyper-V role detected
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 10 microcode 0xf0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, fma, vzeroupper, clflush, clflushopt, hv
+
+Memory: 4k page, system-wide physical 12163M (536M free)
+TotalPageFile size 49027M (AvailPageFile size 41M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 60M, peak: 252M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (17.0.6+9-LTS-190) for windows-amd64 JRE (17.0.6+9-LTS-190), built on Dec  6 2022 15:53:54 by "mach5one" with MS VC++ 17.1 (VS2022)
+
+END.
